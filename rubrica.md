@@ -7,7 +7,7 @@
 ---
 
 ## 1. Criterios Generales y Estructura Principal (10 Puntos)
-*Obligatorio y común a ambos temas.*
+*Obligatorio.*
 
 | Ítem Evaluado | Puntaje | Detalle y Consideraciones |
 | :--- | :---: | :--- |
@@ -18,7 +18,7 @@
 
 ---
 
-## 2. Tema 1: Telemetría y Actuadores de Celdas Robóticas
+## 2. Telemetría y Actuadores de Celdas Robóticas
 
 ### Ejercicio 1: Calibración de Actuadores (45 Puntos) - Ciclo Exacto
 *Evalúa el uso de ciclos determinados (`for` o `while` con contador), validación interna y acumuladores.*
@@ -43,32 +43,7 @@
 
 ---
 
-## 3. Tema 2: Control de Calidad en Línea Automatizada
-
-### Ejercicio 1: Test de Resistencia de Sensores Térmicos (45 Puntos) - Ciclo Exacto
-*Evalúa ciclos determinados de 7 repeticiones, acumulación de tiempos y condicional evaluativo global.*
-
-| Criterio | Puntaje | Caso de Prueba / Regla de Corrección |
-| :--- | :---: | :--- |
-| **Estructura del Ciclo Exacto** | **15 pts** | Itera **exactamente 7 veces** (un sensor por vuelta). |
-| **Validación Interna (`tiempo > 0`)** | **10 pts** | Bucle interno `while` que rechaza valores `<= 0`. |
-| **Acumulación y Promedio** | **10 pts** | Suma los tiempos y calcula el promedio dividiendo entre 7. |
-| **Condicional de Alerta (> 15 ms)** | **10 pts** | Si promedio > 15 ms: `"ALERTA: La línea requiere recalibración"`; sino `"ESTADO NOMINAL"`. |
-
-### Ejercicio 2: Inspección de Peso de Piezas Fabricadas (55 Puntos) - Ciclo Indeterminado
-*Evalúa ciclos condicionales con centinela 0, rangos de tolerancia y detección del peso máximo.*
-
-| Criterio | Puntaje | Caso de Prueba / Regla de Corrección |
-| :--- | :---: | :--- |
-| **Estructura de Parada por Centinela (0)** | **15 pts** | Ciclo `while` que finaliza al ingresar `0` (el cero no cuenta como pieza). |
-| **Validación de No Negatividad (`peso >= 0`)**| **10 pts** | Rechaza valores negativos con mensaje de error sin incrementar contadores. |
-| **Control de Tolerancia [480, 520]** | **10 pts** | Clasifica como Aceptada (480 a 520 inclusive) o Rechazada (fuera de rango). |
-| **Búsqueda de la Pieza Más Pesada (Máximo)**| **10 pts** | Algoritmo correcto de mayor valor para determinar el peso máximo. |
-| **Porcentaje de Rechazadas y Caso Límite** | **10 pts** | Calcula `(rechazadas / total) * 100`. Si el primer dato es `0`, muestra mensaje de lote vacío sin `ZeroDivisionError`. |
-
----
-
-## 4. Escala de Conversión Numérica (Ordenanza Académica UCSE)
+## 3. Escala de Conversión Numérica (Ordenanza Académica UCSE)
 
 | Puntaje Logrado | Calificación Numérica | Condición Final |
 | :---: | :---: | :---: |
@@ -84,7 +59,7 @@
 
 ---
 
-## 5. Tabla de Penalizaciones Frecuentes
+## 4. Tabla de Penalizaciones Frecuentes
 - **-10% a -20%:** Si el programa se cuelga (termina abruptamente) ante ingresos inválidos o división por cero.
 - **-20%:** Si se utilizó un ciclo condicional `while` libre en un ejercicio que exigía explícitamente ciclo exacto (`for` o contador fijo).
 - **-10%:** Si no se validan los valores negativos en las entradas requeridas.

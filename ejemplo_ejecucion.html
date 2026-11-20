@@ -73,13 +73,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-12 overflow-x-auto text-xs font-bold">
         <div class="flex space-x-2 sm:space-x-4">
           <a href="index.html" class="text-slate-300 hover:text-white px-3 py-1.5 rounded-md transition flex items-center gap-1.5">
-            <i class="fas fa-home"></i> Portal
-          </a>
-          <a href="tema1.html" class="text-slate-300 hover:text-white px-3 py-1.5 rounded-md transition flex items-center gap-1.5">
-            <i class="fas fa-robot"></i> Tema 1
-          </a>
-          <a href="tema2.html" class="text-slate-300 hover:text-white px-3 py-1.5 rounded-md transition flex items-center gap-1.5">
-            <i class="fas fa-industry"></i> Tema 2
+            <i class="fas fa-home"></i> Consignas
           </a>
           <a href="ejemplo_ejecucion.html" class="bg-emerald-600 text-white px-3 py-1.5 rounded-md transition flex items-center gap-1.5 shadow-sm">
             <i class="fas fa-terminal"></i> Casos de Prueba
@@ -109,14 +103,11 @@
         </h2>
       </div>
 
-      <!-- SELECTOR DE TEMA PARA LA SIMULACIÓN -->
-      <div class="flex items-center gap-2 bg-white p-1.5 rounded-2xl shadow-sm border border-slate-200">
-        <button onclick="cambiarTemaSim('tema1')" id="btn-sim-t1" class="px-4 py-2 rounded-xl text-xs font-bold bg-ucse-primary text-white shadow transition">
-          <i class="fas fa-robot mr-1"></i> Simular Tema 1
-        </button>
-        <button onclick="cambiarTemaSim('tema2')" id="btn-sim-t2" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition">
-          <i class="fas fa-industry mr-1"></i> Simular Tema 2
-        </button>
+      <!-- BADGE DEL EXAMEN -->
+      <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-2xl shadow-sm border border-slate-200">
+        <span class="text-xs font-bold text-ucse-primary">
+          <i class="fas fa-robot mr-1 text-ucse-cyan"></i> Simulación de Consola
+        </span>
       </div>
     </div>
 
@@ -198,71 +189,6 @@ Seleccione una opción: <span class="text-white font-bold underline">3</span>
 Finalizando programa de control. ¡Hasta luego!</code></pre>
       </div>
 
-      <!-- CONTENEDOR DE TERMINAL PARA TEMA 2 -->
-      <div id="sim-t2" class="font-mono text-xs sm:text-sm text-amber-300 leading-relaxed overflow-x-auto space-y-4 hidden">
-<pre><code># 1. IDENTIFICACIÓN EN LA PRIMERA LÍNEA
-Alumno: Lopez Ana
-
-==================================================
---- MENÚ DE CONTROL DE CALIDAD INDUSTRIAL ---
-==================================================
-1. Test de Resistencia de Sensores Térmicos
-2. Inspección de Peso de Piezas Fabricadas
-3. Salir
-Seleccione una opción: <span class="text-white font-bold underline">1</span>
-
->>> Módulo 1: Test de Resistencia de Sensores Térmicos
-Sensor 1 - Tiempo de respuesta (ms): <span class="text-white font-bold underline">11.2</span>
-Sensor 2 - Tiempo de respuesta (ms): <span class="text-white font-bold underline">13.5</span>
-Sensor 3 - Tiempo de respuesta (ms): <span class="text-white font-bold underline">14.0</span>
-Sensor 4 - Tiempo de respuesta (ms): <span class="text-white font-bold underline">12.8</span>
-Sensor 5 - Tiempo de respuesta (ms): <span class="text-white font-bold underline">10.5</span>
-Sensor 6 - Tiempo de respuesta (ms): <span class="text-white font-bold underline">15.0</span>
-Sensor 7 - Tiempo de respuesta (ms): <span class="text-white font-bold underline">12.1</span>
-
---- INFORME DE SENSORES TÉRMICOS ---
-Tiempo total acumulado: 89.10 ms
-Tiempo promedio de respuesta: 12.73 ms
-ESTADO NOMINAL: Sensores operando dentro de rangos óptimos.
-
-==================================================
---- MENÚ DE CONTROL DE CALIDAD INDUSTRIAL ---
-==================================================
-1. Test de Resistencia de Sensores Térmicos
-2. Inspección de Peso de Piezas Fabricadas
-3. Salir
-Seleccione una opción: <span class="text-white font-bold underline">2</span>
-
->>> Módulo 2: Inspección de Peso de Piezas (Ingrese 0 para finalizar)
-Pieza 1 - Peso en gramos: <span class="text-white font-bold underline">502.4</span>
--> Estado: Pieza Aceptada [Calidad Conforme]
-
-Pieza 2 - Peso en gramos: <span class="text-white font-bold underline">530.0</span>
--> Estado: Pieza Rechazada [Descarte / Reproceso]
-
-Pieza 3 - Peso en gramos: <span class="text-white font-bold underline">495.1</span>
--> Estado: Pieza Aceptada [Calidad Conforme]
-
-Pieza 4 - Peso en gramos: <span class="text-white font-bold underline">472.0</span>
--> Estado: Pieza Rechazada [Descarte / Reproceso]
-
-Pieza 5 - Peso en gramos: <span class="text-white font-bold underline">0</span>
-
---- RESUMEN DE CONTROL DE CALIDAD ---
-Total de piezas procesadas: 4
-Piezas rechazadas: 2 (50.00%)
-Pieza más pesada registrada: 530.00 g
-
-==================================================
---- MENÚ DE CONTROL DE CALIDAD INDUSTRIAL ---
-==================================================
-1. Test de Resistencia de Sensores Térmicos
-2. Inspección de Peso de Piezas Fabricadas
-3. Salir
-Seleccione una opción: <span class="text-white font-bold underline">3</span>
-Finalizando sistema de control de calidad. ¡Hasta luego!</code></pre>
-      </div>
-
     </div>
 
     <!-- ANÁLISIS DE CASOS LÍMITE (EDGE CASES) -->
@@ -287,7 +213,7 @@ Finalizando sistema de control de calidad. ¡Hasta luego!</code></pre>
         </div>
         <h4 class="font-bold text-slate-900 text-sm">Ingreso Inmediato del Centinela</h4>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Si el usuario entra al Ejercicio 2 e inmediatamente ingresa el valor de parada (<code>-1</code> en Tema 1 o <code>0</code> en Tema 2), el programa no debe dar <code>ZeroDivisionError</code>.
+          Si el usuario entra al Ejercicio 2 e inmediatamente ingresa el valor de parada (<code>-1</code>), el programa no debe dar <code>ZeroDivisionError</code>.
         </p>
         <div class="text-[11px] font-mono bg-amber-50 text-amber-800 p-2 rounded border border-amber-200">
           if total > 0: ... else: print("No se registraron datos.")
@@ -316,31 +242,12 @@ Finalizando sistema de control de calidad. ¡Hasta luego!</code></pre>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
       <div>Universidad Católica de Santiago del Estero • Cátedra de Informática</div>
       <div class="flex gap-4">
-        <a href="tema1.html" class="hover:text-white transition">Tema 1</a>
-        <span>•</span>
-        <a href="tema2.html" class="hover:text-white transition">Tema 2</a>
+        <a href="index.html" class="hover:text-white transition">Consignas</a>
         <span>•</span>
         <a href="rubrica.html" class="hover:text-white transition">Rúbrica</a>
       </div>
     </div>
   </footer>
-
-  <!-- SCRIPT PARA CONMUTAR SIMULACIÓN -->
-  <script>
-    function cambiarTemaSim(tema) {
-      if (tema === 'tema1') {
-        document.getElementById('sim-t1').classList.remove('hidden');
-        document.getElementById('sim-t2').classList.add('hidden');
-        document.getElementById('btn-sim-t1').className = "px-4 py-2 rounded-xl text-xs font-bold bg-ucse-primary text-white shadow transition";
-        document.getElementById('btn-sim-t2').className = "px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition";
-      } else {
-        document.getElementById('sim-t1').classList.add('hidden');
-        document.getElementById('sim-t2').classList.remove('hidden');
-        document.getElementById('btn-sim-t2').className = "px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-ucse-navy font-black shadow transition";
-        document.getElementById('btn-sim-t1').className = "px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition";
-      }
-    }
-  </script>
 
 </body>
 </html>
